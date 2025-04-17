@@ -1,6 +1,7 @@
 /*
 const = use for constants
 let = use for varible 
+console
 */
 
 const id = 345
