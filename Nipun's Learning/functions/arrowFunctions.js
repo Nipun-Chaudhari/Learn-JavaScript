@@ -19,9 +19,12 @@ const obj1 = {
     name: "Nipun",
     age: 24,
 
+    // here if we use arrow function, it will not work as expected
+    // because arrow function does not have its own 'this' context, it takes the 'this' from the parent scope
     greet: function() {
         return (`Hello, I am ${this.name}`)
     }
 }
 
 console.log(obj1.greet())
+
