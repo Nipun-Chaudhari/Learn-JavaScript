@@ -20,6 +20,7 @@ body {
     padding: 9px;
     margin: 5%;
     background-color: whitesmoke;
+    overflow: scroll;
 }
 
 .input-form {

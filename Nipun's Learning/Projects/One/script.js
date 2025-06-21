@@ -1,4 +1,5 @@
 const item = document.getElementById("item");
+
 document.querySelector("button").addEventListener("click", function (e) {
     e.preventDefault();
     let newItem = item.value.trim();
@@ -15,20 +16,19 @@ function createItem(item) {
 
     try {
         const span = document.createElement('span');
-        const input = document.createElement('input');
-        const label = document.createElement('label');
-        const removeButton = document.createElement('button');
+        const p = document.createElement('p');
 
-        input.setAttribute('type', 'checkbox');
         span.setAttribute('class', 'item-span');
-        label.setAttribute('for', item);
+        p.textContent = item;
 
-        const text = document.createTextNode(item);
+        span.appendChild(p);
 
-        label.appendChild(text);
-        span.appendChild(input);
-        span.appendChild(label);
         display_area.appendChild(span);
+
+        // Add click event to span to delete itself
+        span.addEventListener('click', function () {
+            span.remove();
+        });
 
     } catch (error) {
         console.log(error);
